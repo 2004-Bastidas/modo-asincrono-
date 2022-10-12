@@ -1,0 +1,31 @@
+{
+  "name": "modo-asincrono",
+  "version": "1.0.0",
+  "description": "modo asincrono ",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon callback/3_request.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2004-Bastidas/modo-asincrono-.git"
+  },
+  "keywords": [
+    "es6",
+    "es2015",
+    "modo",
+    "asincrono"
+  ],
+  "author": "Mauricio Bastias",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2004-Bastidas/modo-asincrono-/issues"
+  },
+  "homepage": "https://github.com/2004-Bastidas/modo-asincrono-#readme",
+  "dependencies": {
+    "nodemon": "^2.0.20",
+    "request": "^2.88.2",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
