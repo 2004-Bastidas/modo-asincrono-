@@ -4,7 +4,7 @@
   "description": "modo asincrono ",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon callback/3_request.js",
+    "dev": "nodemon await/3_needle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,6 +24,8 @@
   },
   "homepage": "https://github.com/2004-Bastidas/modo-asincrono-#readme",
   "dependencies": {
+    "axios": "^1.1.2",
+    "needle": "^3.1.0",
     "nodemon": "^2.0.20",
     "request": "^2.88.2",
     "xmlhttprequest": "^1.8.0"

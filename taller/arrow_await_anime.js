@@ -1,24 +1,24 @@
 //Dependencia a XMLHttpRequest
 const http = require("xmlhttprequest").XMLHttpRequest
 
-const url = "https://pokeapi.co/api/v2/type"
+const url = "https://animechan.vercel.app/api/quotes"
 
-function exito(data){
-    const tipos = JSON.parse(data).results
+const exito = data => {
+    const tipos = JSON.parse(data)
     //Recorrer el arreglo de tipos
     tipos.forEach(function (element) {
-        console.log(`Tipo: ${element.name}`)
+        console.log(`Anime: ${element.anime} Protagonista: ${element.character}`)
         console.log(`---------------------`)
     })
 }
 
-function fallo(status){
+const fallo = (status) => {
     console.log(status)
 }
 
 
 //Funcion para conectarnos a una API publica
-function get_data(endpoint , exito , fallo){
+const get_data = (endpoint , exito , fallo) => {
     //1. Crear el objeto de conexion
     const h = new http()
     //2. Abrir una conexion a la API
@@ -28,7 +28,11 @@ function get_data(endpoint , exito , fallo){
     //4. Una vez, recibida la Response,
     //      tratar la informacion
     h.onload = function(){
-        exito(h.responseText)
+        if(h.status === 200){
+            exito(h.responseText)
+        }else{
+            fallo(http.status)
+        }
     }
 }
 

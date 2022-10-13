@@ -13,7 +13,7 @@ const exito = data => {
 }
 
 const fallo = (status) => {
-    cosole.log(status)
+    console.log(status)
 }
 
 
